@@ -1,0 +1,1 @@
+SELECT p.* FROM MDPL2.Rockstar AS p,(SELECT nprog, Mvir, rockstarId, snapnum FROM MDPL2.Rockstar WHERE Mvir > 1e14 AND nprog > 1) AS q WHERE p.descId = q.rockstarId AND q.snapnum = p.snapnum+1 AND p.Mvir > 1e14;
